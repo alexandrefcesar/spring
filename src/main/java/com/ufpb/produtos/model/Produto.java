@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
@@ -22,7 +23,7 @@ public class Produto {
 	private String nome;
 	
     @NotEmpty
-    @Size(max=100)
+    @Min(0)
 	private Double valor;
 
 	public Long getId() {
